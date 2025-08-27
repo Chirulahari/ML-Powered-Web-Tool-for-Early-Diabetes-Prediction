@@ -79,12 +79,12 @@ This project was designed as a complete **end-to-end ML application**: from mode
 ---
 ## ⚙️ Installation
 
-### 🔹 Frontend
-```bash
+    ### 🔹 Frontend
+    ```bash
 cd frontend
 npm install
 npm start
-### 🔹 Backend
+    ### 🔹 Backend
 ```bash
 cd backend
 pip install -r requirements.txt
