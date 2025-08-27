@@ -39,6 +39,31 @@ This project was designed as a complete **end-to-end ML application**: from mode
 ---
 
 ## 📂 Project Structure
+diabetes-prediction/
+│
+├── backend/ # FastAPI backend
+│ ├── main.py # API endpoints
+│ ├── model.pkl # Trained Random Forest model
+│ ├── requirements.txt # Backend dependencies
+│
+├── frontend/ # React frontend
+│ ├── src/
+│ │ ├── App.js # Main app (form + results)
+│ │ ├── App.css # Styling and animations
+│ │ ├── index.js # Entry point
+│ │ ├── InputForm.js # Form component (modularized)
+│ │ ├── Result.js # Result display component
+│ └── public/
+│ ├── wall.jpg # Background
+│ ├── diabetes.webp # Diabetic result image
+│ ├── no-diabetes.webp # Non-Diabetic result image
+│
+├── model/ # ML model code
+│ ├── train_model.py # Training + saving the model
+│ ├── kaggle_diabetes.csv # Dataset
+│
+└── README.md # Project documentation
+
 
 ---
 
