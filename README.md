@@ -39,30 +39,6 @@ This project was designed as a complete **end-to-end ML application**: from mode
 ---
 
 ## 📂 Project Structure
-diabetes-prediction/
-│
-├── backend/ # FastAPI backend
-│ ├── main.py # API endpoints
-│ ├── model.pkl # Trained Random Forest model
-│ ├── requirements.txt # Backend dependencies
-│
-├── frontend/ # React frontend
-│ ├── src/
-│ │ ├── App.js # Main app (form + results)
-│ │ ├── App.css # Styling and animations
-│ │ ├── index.js # Entry point
-│ │ ├── InputForm.js # Form component (modularized)
-│ │ ├── Result.js # Result display component
-│ └── public/
-│ ├── wall.jpg # Background
-│ ├── diabetes.webp # Diabetic result image
-│ ├── no-diabetes.webp # Non-Diabetic result image
-│
-├── model/ # ML model code
-│ ├── train_model.py # Training + saving the model
-│ ├── kaggle_diabetes.csv # Dataset
-│
-└── README.md # Project documentation
 
 ---
 
@@ -76,23 +52,23 @@ diabetes-prediction/
 - **Joblib** → Model serialization  
 
 ---
-
 ## ⚙️ Installation
 
 ### 🔹 Frontend
+```bash
 cd frontend
 npm install
 npm start
-
 ### 🔹 Backend
 ```bash
 cd backend
 pip install -r requirements.txt
 uvicorn main:app --reload
 
-## 🚀 Usage
 
-Open the frontend at 👉 [http://localhost:3000](http://localhost:3000)  
+---
+
+## 🚀 Usage
 
 Enter values for:  
 - Pregnancies  
@@ -109,4 +85,3 @@ Click **Predict**
 Get instant result:  
 - ✅ *Non-Diabetic* → green message + healthy image  
 - ❌ *Diabetic* → red message + diabetes alert image  
-
