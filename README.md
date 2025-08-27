@@ -16,8 +16,6 @@ The system is powered by a **Random Forest Classifier**, served via a **FastAPI 
 - [Project Structure](#project-structure)  
 - [Technologies Used](#technologies-used)  
 - [Installation](#installation)  
-- [Usage](#usage)   
-
 
 
 ---
@@ -79,13 +77,14 @@ This project was designed as a complete **end-to-end ML application**: from mode
 ---
 ## ⚙️ Installation
 
-### 🔹 Frontend
-```bash
-cd frontend
-npm install
-npm start
+ 🔹 Frontend
+    ```bash
+    cd frontend
+    npm install
+    npm start
 
-### 🔹 Backend
-cd backend
-pip install -r requirements.txt
-uvicorn main:app --reload
+ 🔹 Backend
+    cd backend
+    pip install -r requirements.txt
+    uvicorn main:app --reload
+    
