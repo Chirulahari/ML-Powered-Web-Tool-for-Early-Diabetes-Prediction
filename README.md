@@ -79,34 +79,13 @@ This project was designed as a complete **end-to-end ML application**: from mode
 ---
 ## ⚙️ Installation
 
-    ### 🔹 Frontend
-    ```bash
+### 🔹 Frontend
+```bash
 cd frontend
 npm install
 npm start
-    ### 🔹 Backend
-```bash
+
+### 🔹 Backend
 cd backend
 pip install -r requirements.txt
 uvicorn main:app --reload
-
-
----
-
-## 🚀 Usage
-
-Enter values for:  
-- Pregnancies  
-- Glucose  
-- Blood Pressure  
-- Skin Thickness  
-- Insulin  
-- BMI  
-- Diabetes Pedigree Function (DPF)  
-- Age  
-
-Click **Predict**  
-
-Get instant result:  
-- ✅ *Non-Diabetic* → green message + healthy image  
-- ❌ *Diabetic* → red message + diabetes alert image  
