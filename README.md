@@ -15,7 +15,8 @@ The system is powered by a **Random Forest Classifier**, served via a **FastAPI 
 - [Motivation](#motivation)  
 - [Project Structure](#project-structure)  
 - [Technologies Used](#technologies-used)  
-- [Installation](#installation)  
+- [Installation](#installation)
+- [Demo](#demo)
 
 
 ---
@@ -88,4 +89,7 @@ This project was designed as a complete **end-to-end ML application**: from mode
         cd backend
         pip install -r requirements.txt
         uvicorn main:app --reload
+## 🎥 Demo
+👉 [Watch Demo Video](./Demo/Diabetes%20Predictor.mp4)
+
     
