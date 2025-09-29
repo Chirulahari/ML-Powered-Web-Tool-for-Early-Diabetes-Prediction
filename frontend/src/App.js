@@ -13,16 +13,42 @@ function App() {
     dpf: "",
     age: ""
   });
+
   const [result, setResult] = useState(null);
+  const [error, setError] = useState(""); // <— NEW: holds validation message
 
   const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+    const { name, value } = e.target;
+
+    // If the value is negative, set an error and keep the state
+    if (value !== "" && Number(value) < 0) {
+      setError("Undefined value");
+    } else {
+      setError("");
+    }
+
+    setFormData({ ...formData, [name]: value });
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const res = await axios.post("http://localhost:8000/predict", formData);
-    setResult(res.data.prediction);
+
+    // Final validation before sending to backend
+    const hasNegative = Object.values(formData).some(
+      (v) => v === "" || Number(v) < 0
+    );
+    if (hasNegative) {
+      setError("Undefined value");
+      setResult(null);
+      return;
+    }
+
+    try {
+      const res = await axios.post("http://localhost:8000/predict", formData);
+      setResult(res.data.prediction);
+    } catch (err) {
+      setError("Server error. Please try again.");
+    }
   };
 
   return (
@@ -57,7 +83,11 @@ function App() {
         <button type="submit" className="predict-btn">Predict</button>
       </form>
 
-      {result !== null && (
+      {/* Show error if any */}
+      {error && <p className="error" style={{ color: "red" }}>{error}</p>}
+
+      {/* Show result only when no error */}
+      {result !== null && !error && (
         <div className="result">
           {result === 1 ? (
             <>
